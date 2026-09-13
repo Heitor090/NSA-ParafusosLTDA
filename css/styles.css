@@ -916,9 +916,10 @@ Localização e Estacionamento
     .header-content {
         height: 70px;
     }
-
-
-
+    
+    .btn{
+        font-size: 10px;
+    }
 
 
     .nav {
@@ -987,18 +988,9 @@ Localização e Estacionamento
 
         cursor: pointer;
     }
-
-
-
-
-
-
     .nav.active {
         display: flex;
     }
-
-
-
 
     .menu-toggle {
         display: block;
