@@ -113,6 +113,8 @@ a {
     font-size: 28px;
 
     cursor: pointer;
+
+    animation: menuDrop 0.6s ease-out;
 }
 
 
@@ -846,6 +848,23 @@ Localização e Estacionamento
     font-size: 14px;
 }
 
+@keyframes menuDrop {
+    0% {
+        transform: translateY(-80px);
+        opacity: 0;
+    }
+
+    70% {
+        transform: translateY(10px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 
 /* =========================
    RESPONSIVO
@@ -899,27 +918,96 @@ Localização e Estacionamento
     }
 
 
+
+
+
     .nav {
         position: absolute;
 
         top: 70px;
         left: 0;
+
         width: 100%;
 
-        display: none;
-
+        display: flex;
         flex-direction: column;
-
         gap: 0;
 
         background: #18231b;
+
+        /* Estado fechado */
+        transform: translateY(-120%);
+        opacity: 0;
+
+        pointer-events: none;
+
+        transition:
+            transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+            opacity 0.3s ease;
+
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     }
+
+
+    /* Estado aberto */
+    .nav.active {
+        transform: translateY(0);
+        opacity: 1;
+
+        pointer-events: auto;
+    }
+
+
+    .nav a {
+        padding: 18px 5%;
+
+        border-top: 1px solid rgba(255,255,255,.08);
+
+        transition:
+            background 0.3s ease,
+            padding-left 0.3s ease;
+    }
+
+
+    .nav a:hover {
+        background: rgba(255,255,255,0.05);
+
+        padding-left: 6%;
+    }
+
+
+    .menu-toggle {
+        display: block;
+
+        background: transparent;
+        border: none;
+
+        color: white;
+        font-size: 28px;
+
+        cursor: pointer;
+    }
+
+
+
+
 
 
     .nav.active {
         display: flex;
     }
 
+
+
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-toggle {
+        animation: menuDrop 0.6s ease-out;
+    
+    }
 
     .nav a {
         padding: 18px 5%;
