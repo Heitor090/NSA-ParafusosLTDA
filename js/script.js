@@ -45,7 +45,9 @@ form.addEventListener("submit", function (event) {
 
     const product = document.getElementById("product").value.trim();
 
-    const message = document.getElementById("message").value.trim();
+    const description = document.getElementById("description").value.trim();
+
+
 
 
     // Número do WhatsApp da loja
@@ -53,16 +55,18 @@ form.addEventListener("submit", function (event) {
     // Formato: código do país + DDD + número
     // Exemplo: 5511999999999
 
-    const whatsappNumber = "5511999621292";
+    const whatsappNumber = "5511952218057";
 
 
     const text =
+      
+
         `Olá, N S A Comércio de Parafusos!%0A%0A` +
         `Gostaria de solicitar um orçamento.%0A%0A` +
         `Nome: ${name}%0A` +
         `Telefone: ${phone}%0A` +
         `Produto: ${product}%0A` +
-        `Mensagem: ${message}`;
+        `Descrição: ${description}`;
 
 
     const whatsappUrl =
