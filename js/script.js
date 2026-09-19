@@ -53,7 +53,7 @@ form.addEventListener("submit", function (event) {
     // Formato: código do país + DDD + número
     // Exemplo: 5511999999999
 
-    const whatsappNumber = "5511999999999";
+    const whatsappNumber = "5511999621292";
 
 
     const text =
